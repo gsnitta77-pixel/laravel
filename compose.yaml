@@ -8,5 +8,8 @@ services:
       - type: bind
         source: "./src/app"
         target: "/src"
+      - type: bind
+        source: "./docker/app/php/php.ini"
+        target: "/usr/local/etc/php/php.ini"
     working_dir: "/src"
     tty: true
