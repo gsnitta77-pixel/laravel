@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    container_name: app
+    volumes:
+      - type: bind
+        source: "./src/app"
+        target: "/src"
+    working_dir: "/src"
+    tty: true
